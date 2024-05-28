@@ -4,3 +4,6 @@ services:
 
 before_install: 
   ---docker build  -t Frontend  -f  Dockerfile.dev .
+
+scirps:
+  -docker run Frontend npm run test -- --covarage
