@@ -1,9 +1,10 @@
 sudo: required
+
 services:
-  --docker
+  - docker
 
 before_install: 
-  ---docker build  -t Frontend  -f  Dockerfile.dev .
+  - docker build -t frontend -f Dockerfile.dev .
 
-scirps:
-  -docker run Frontend npm run test -- --covarage
+script:
+  - docker run frontend npm run test -- --coverage
