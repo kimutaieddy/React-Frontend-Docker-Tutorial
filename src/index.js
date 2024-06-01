@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const TimeDisplay = () => {
@@ -22,11 +21,19 @@ const TimeDisplay = () => {
   );
 };
 
+const App = () => {
+  return (
+    <div className="App">
+      <h1>Welcome to My App</h1>
+      <TimeDisplay />
+    </div>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <TimeDisplay /> {/* Add the TimeDisplay component here */}
   </React.StrictMode>
 );
 
