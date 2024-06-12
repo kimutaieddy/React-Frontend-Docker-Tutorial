@@ -16,4 +16,6 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+    environment:
+      - PATH=$PATH:/app/node_modules/.bin  # Add node_modules/.bin to PATH
     command: ["npm", "run", "test"]
